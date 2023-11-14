@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* Стили для всей страницы */
+:root {
+    font-size: 16px;
+    --page-bg-color: #161616;
+    --element-bg-color: #1E1E1E;
+    --selected-button-color: #2B2A2A;
+    --element-border-gray-color: #b6b6b6;
+    --button-green-color: #27321E;
+    --selected-button-green-color: #2A3621;
+    --button-red-color: #321F1E;
+    --selected-button-red-color: #3D2624;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--page-bg-color);
+    color: white;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.btn-default {
+    background-color: white;
+}
+
+.container {
+    width: 1100px;
+    max-width: 90vw;
+    margin: 0 auto;
+    min-height: 38px;
+}
+
+/* Чётные строки таблиц */
+tbody {
+    color: white;
+    background-color: var(--element-bg-color);
+}
+
+/* Нечётные строки таблиц */
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    color: var(--element-border-gray-color);
+    background-color: var(--selected-button-color);
+}
+
+/* Костыль для решения проблемы того, что main лезет под header */
+.placeLikeHeader {
+    display: block;
+    height: 54px;
+    width: 100vw;
+    background-color: gray;
+}
+
+/* Карточка существ */
+.npc-item {
+    width: 491px;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    background-color: var(--element-bg-color);
+    padding: 16px;
+}
+
+.npc-item-data {
+    height: 112px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.npc-item-textdata {
+    width: 278px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.npc-item-textdata p,  .npc-item-textdata h2{
+    margin: 6px 0;
+}
+
+.npc-item-imgdata {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.npc-item img {
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.npc-item a {
+    width: 100%;
+    background-color: var(--page-bg-color);
+    border: 1px solid white;
+    margin-top: 16px;
+}
+
+.npc-item-dangerLevel {
+    font-size: 1.5rem;
+    width: 35px;
+}
+
+.vertical-line {
+    background-color: white;
+    height: 100%;
+    width: 2px;
+}
+
+/* Действия, описание, особенности и прочие списки данных из других таблиц */
+.listOfAnotherTableData {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.listOfAnotherTableData li {
+    line-height: 1.5rem;
+}
